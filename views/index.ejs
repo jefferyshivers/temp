@@ -4,6 +4,8 @@
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/all.css' />
     <link rel='stylesheet' href='/stylesheets/top-nav.css' />
+    <script src='/javascripts/lib/stickyfill.min.js'></script>
+    <script src='/javascripts/sticky.js'></script>
     <meta name="viewport" content="width=device-width,height=device-height initial-scale=1">
   </head>
   <body>
@@ -13,13 +15,12 @@
   	</div>
 		
 		<div class="top-nav">
-			<!-- <img style='position:relative;height:80%;width:auto' src='/images/fizzle-logo'> -->
+			<img style='position:relative;height:80%;width:auto' src='/images/fizzle-logo'>
 		</div>
 
 		<div class="sticky-card"></div>
 
 		<div class="sticky-card" id='one'>
-			<div class='inner-left'>one</div>
 			<div class='inner-left'>one</div>
 		</div>
 
@@ -35,7 +36,23 @@
 		<div class="sticky-card">
 			<div class='inner-right'>three</div>
 			<div class='inner-right'>three</div>
+			<div class='inner-right'>three</div>			
 		</div>
+
+		<div class="sticky-card">
+			<div class='inner-right'>four</div>
+			<div class='inner-right'>four</div>
+			<div class='inner-right'>four</div>
+			<div class='inner-right'>four</div>		
+		</div>
+
+		<div class="sticky-card">
+			<div class='inner-right'>five</div>
+			<div class='inner-right'>five</div>
+			<div class='inner-right'>five</div>
+			<div class='inner-right'>five</div>
+			<div class='inner-right'>five</div>			
+		</div>				
 
 		<div class="sticky-card" id='three'></div>
 
