@@ -1,0 +1,122 @@
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background: rgb(240,240,240);
+  background: pink;
+  font-family: 'Rajdhani', sans-serif;
+  color: rgb(80,80,80);
+  -webkit-tap-hightlight-color: rgba(0,0,0,0) 
+  -webkit-overflow-scrolling: touch;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+
+
+
+
+
+}
+
+a {
+  color: rgb(0,200,255);
+}
+
+p {
+	margin: 5px;
+}
+
+::-webkit-scrollbar {
+  width: 0px;  /* remove scrollbar space */
+  background: transparent;
+  display: none;
+}
+
+.top-card {
+	position: relative;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	background: pink;
+
+	font-size: 48pt;
+	color: white;
+
+	/*display: flex;*/
+	display: -webkit-flex;	
+	align-items: center;
+	justify-content: center;
+	-webkit-align-content: center;
+	-webkit-justify-content: center;
+	-webkit-flex-direction: row;
+	-webkit-flex-wrap: wrap;
+}
+
+
+.top-nav {
+	position: sticky;
+	top: 0;
+	width: 100%;
+	height: 100px;
+	background: rgba(0,200,255,.9);
+	z-index: 10;
+
+	display: -webkit-flex;	
+	align-items: center;
+	justify-content: center;
+	-webkit-align-content: center;
+	-webkit-justify-content: center;
+	-webkit-flex-direction: row;
+	-webkit-flex-wrap: wrap;
+}
+
+.sticky-card {
+	position: sticky;
+	top: 104px;
+	width: 100%;
+	height: calc(100vh - 108px);
+	background: pink;
+	background: linear-gradient(to bottom, transparent, pink, pink, pink, pink, pink);
+	margin-bottom: 4px;
+
+	padding-top: 50px;
+	padding-bottom: 50px;
+	font-size: 48pt;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	color: white;
+}
+
+.inner-left {
+	position: relative;
+	width: 100%;
+	height: 100px;
+}
+.inner-centered {
+	position: relative;
+	width: 100%;
+	height: 100px;
+	display: flex;
+	justify-content: center;
+}
+.inner-right {
+	position: relative;
+	width: 100%;
+	height: 100px;
+	display: -webkit-flex;	
+	align-items: center;
+	justify-content: flex-end;
+	-webkit-align-content: center;
+	-webkit-justify-content: flex-end;
+	-webkit-flex-direction: row;
+	-webkit-flex-wrap: wrap;
+}
