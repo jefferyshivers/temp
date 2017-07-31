@@ -3,8 +3,7 @@ body {
   height: 100%;
   padding: 0;
   margin: 0;
-  background: rgb(240,240,240);
-  background: pink;
+  background: white;
   font-family: 'Rajdhani', sans-serif;
   color: rgb(80,80,80);
   -webkit-tap-hightlight-color: rgba(0,0,0,0) 
@@ -18,11 +17,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
   /* Support for IE. */
   font-feature-settings: 'liga';
+}
 
-
-
-
-
+.sticky-card:before,
+.sticky-card:after {
+    content: '';
+    display: table;
 }
 
 a {
@@ -30,7 +30,14 @@ a {
 }
 
 p {
-	margin: 5px;
+	margin: 25px;
+  font-size: 18pt;
+  text-align: center;
+  line-height: 1.5em;
+}
+
+name {
+  color: rgb(0,200,255);
 }
 
 ::-webkit-scrollbar {
@@ -39,17 +46,34 @@ p {
   display: none;
 }
 
+.title {
+  position: relative;
+  width: 100%;
+
+  display: -webkit-flex;  
+  align-items: center;
+  justify-content: center;
+  -webkit-align-content: center;
+  -webkit-justify-content: center;
+  -webkit-flex-direction: row;
+  -webkit-flex-wrap: wrap;  
+  font-size: 24pt;
+  /*font-style: italic;*/
+}
+.subtitle {
+  font-size: 14pt;
+}
+  
 .top-card {
 	position: relative;
 	top: 0;
 	width: 100vw;
 	height: 100vh;
-	background: pink;
+	background: white;
 
 	font-size: 48pt;
-	color: white;
+	color: rgb(100,200,255);
 
-	/*display: flex;*/
 	display: -webkit-flex;	
 	align-items: center;
 	justify-content: center;
@@ -59,14 +83,13 @@ p {
 	-webkit-flex-wrap: wrap;
 }
 
-
 .top-nav {
 	position: sticky;
 	position: -webkit-sticky;
 	top: 0;
 	width: 100%;
-	height: 100px;
-	background: rgba(0,200,255,.9);
+	height: 55px;
+	background: rgb(100,200,255);
 	z-index: 10;
 
 	display: -webkit-flex;	
@@ -78,48 +101,61 @@ p {
 	-webkit-flex-wrap: wrap;
 }
 
+.menu-item {
+  position: relative;
+  flex: 2;
+  max-width: 150px;
+  height: 100%;
+
+  display: -webkit-flex;  
+  align-items: center;
+  justify-content: center;
+  -webkit-align-content: center;
+  -webkit-justify-content: center;
+  -webkit-flex-direction: row;
+  -webkit-flex-wrap: wrap;
+}
+#story {
+  position: relative;
+  flex: 1;
+  max-width: 75px;
+  height: 100%;
+}
+.menu-item-button {
+  position: relative;
+  width: 90%;
+  height: 90%;
+  border: 2px solid transparent;
+  background: transparent;
+  border:none;
+  color: white;
+  border-radius: 4px;
+  transition: border 100ms;
+  font-size: 12pt;
+  padding: 0;
+}
+.menu-item-button:focus {
+  border: 2px solid white;
+  outline:none;
+}
+.menu-item-button:hover {
+  cursor: pointer;
+}
+
+
 .sticky-card {
 	position: sticky;
 	position: -webkit-sticky;
-	top: 104px;
+	top: 55px;
 	width: 100%;
-	height: calc(100vh - 208px);
-	background: pink;
-	background: linear-gradient(to bottom, rgba(255,192,203,0), pink, pink, pink, pink, pink);
-	margin-bottom: 4px;
-	/*border: 2px solid gray;*/
-
-	padding-top: 50px;
-	padding-bottom: 50px;
-	font-size: 48pt;
+	height: calc(100vh - 55px);
+	background: linear-gradient(to bottom, rgba(255,255,255,0), white, white, white, white, white, white, white);
+/*	padding-top: 50px;
+	padding-bottom: 50px;*/
+	font-size: 18pt;
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
 	flex-wrap: wrap;
-	color: white;
-}
-
-.inner-left {
-	position: relative;
-	/*width: 100%;*/
-	height: 100px;
-}
-.inner-centered {
-	position: relative;
-	/*width: 100%;*/
-	height: 100px;
-	display: flex;
-	justify-content: center;
-}
-.inner-right {
-	position: relative;
-	/*width: 100%;*/
-	height: 100px;
-	display: -webkit-flex;	
-	align-items: center;
-	justify-content: flex-end;
-	-webkit-align-content: center;
-	-webkit-justify-content: flex-end;
-	-webkit-flex-direction: row;
-	-webkit-flex-wrap: wrap;
+	color: rgb(100,200,255);
 }
